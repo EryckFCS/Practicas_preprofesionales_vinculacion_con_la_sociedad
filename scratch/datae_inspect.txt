@@ -1,0 +1,1061 @@
+	Número de registros en esta consulta:	10	Unnamed: 2	Unnamed: 3	Unnamed: 4
+0	Total de registros en esta encuesta:	441			
+1	Porcentaje del total:	0.022675736961451247			
+2					
+3					
+4	Resumen de campo para C03				
+5	Carrera del Graduado				
+6	Opción	Cuenta	Porcentaje		
+7	Administración de Empresas - presencial (1)	0	0		
+8	Derecho - presencial (2)	0	0		
+9	Economía (3)	0	0		
+10	Administración Turística (5)	0	0		
+11	Banca y Finanzas (6)	0	0		
+12	Contabilidad y Auditoría - presencial (7)	10	1		
+13	Trabajo Social - presencial (8)	0	0		
+14	Trabajo Social - distancia (9)	0	0		
+15	Administración de Empresas - distancia (13)	0	0		
+16	Contabilidad y Auditoría - distancia (14)	0	0		
+17	Derecho - distancia (15)	0	0		
+18	Ingeniería Agronómica (19)	0	0		
+19	Ingeniería Forestal (20)	0	0		
+20	Ingeniería Agrícola (21)	0	0		
+21	Ingeniería en Manejo y Conservación del Medio Ambiente (22)	0	0		
+22	Medicina Veterinaria y Zootecnia (23)	0	0		
+23	Artes Plásticas (32)	0	0		
+24	Comunicación Social - presencial (33)	0	0		
+25	Cultura Física y Deportes (34)	0	0		
+26	Educación Básica (35)	0	0		
+27	Físico Matemáticas (36)	0	0		
+28	Idioma Inglés (37)	0	0		
+29	Informática Educativa (38)	0	0		
+30	Lengua Castellana y Literatura (39)	0	0		
+31	Educación Musical  - presencial (40)	0	0		
+32	Educación Musical - semipresencial (41)	0	0		
+33	Psicología Educativa y Orientación (42)	0	0		
+34	Psicología Infantil y Educación Parvularia - presencial (43)	0	0		
+35	Psicorrehabilitacion y Educación Especial - presencial (44)	0	0		
+36	Químico Biológicas (45)	0	0		
+37	Bibliotecología e Información Cientifico-Técnica - distancia (51)	0	0		
+38	Comunicación Social - distancia (53)	0	0		
+39	Informática Educativa - distancia (54)	0	0		
+40	Psicología Infantil y Educación Parvularia - distancia (56)	0	0		
+41	Psicorrehabilitacion y Educación Especial - distancia (57)	0	0		
+42	Enfermería (71)	0	0		
+43	Medicina Humana (72)	0	0		
+44	Odontología (73)	0	0		
+45	Psicología Clínica (74)	0	0		
+46	Ingeniería en Electromecánica (77)	0	0		
+47	Ingeniería en Geología Ambiental y Ordenamiento Territorial (78)	0	0		
+48	Ingeniería en Sistemas (79)	0	0		
+49	Ingeniería en Electrónica y Telecomunicaciones (80)	0	0		
+50	Laboratorio Clínico (96)	0	0		
+51	Administración Pública (98)	0	0		
+52	Ingeniería en Administración y Producción Agropecuaria - distancia (122)	0	0		
+53	Educación Básica (Extensión) - presencial (153)	0	0		
+54	Ingeniería en Mecánica Automotriz (371)	0	0		
+55	INSTRUMENTO PRINCIPAL (372)	0	0		
+56	Pedagogía de las Ciencias Experimentales (Química y Biología) (régimen 2019) (377)	0	0		
+57	PEDAGOGIA DE LAS CIENCIAS EXPERIMENTALES-FÍSICO-MATEMÁTICAS (régimen 2019) (378)	0	0		
+58	PSICOPEDAGOGIA (régimen 2019) (379)	0	0		
+59	PEDAGOGIA DE LAS CIENCIAS EXPERIMENTALES INFORMATICA (régimen 2019) (380)	0	0		
+60	EDUCACION BASICA  (régimen 2019) (381)	0	0		
+61	COMUNICACION (régimen 2019) (386)	0	0		
+62	ARTES MUSICALES (régimen 2019) (387)	0	0		
+63	EDUCACION INICIAL (régimen 2019) (388)	0	0		
+64	PEDAGOGIA DE LA LENGUA Y LITERATURA (régimen 2019) (389)	0	0		
+65	MEDICINA (régimen 2019) (390)	0	0		
+66	ODONTOLOGIA (régimen 2019) (391)	0	0		
+67	ENFERMERIA (régimen 2019) (392)	0	0		
+68	LABORATORIO CLINICO (régimen 2019) (393)	0	0		
+69	PSICOLOGIA CLINICA (régimen 2019) (394)	0	0		
+70	MEDICINA VETERINARIA (régimen 2019) (395)	0	0		
+71	AGRONOMIA (régimen 2019) (396)	0	0		
+72	INGENIERIA AMBIENTAL (régimen 2019) (397)	0	0		
+73	INGENIERIA FORESTAL (régimen 2019) (398)	0	0		
+74	INGENIERIA AGRICOLA (régimen 2019) (399)	0	0		
+75	CONTABILIDAD Y AUDITORIA (régimen 2019) (400)	0	0		
+76	ECONOMIA (régimen 2019) (401)	0	0		
+77	FINANZAS (régimen 2019) (402)	0	0		
+78	ADMINISTRACION DE EMPRESAS (régimen 2019) (403)	0	0		
+79	TURISMO (régimen 2019) (404)	0	0		
+80	DERECHO (régimen 2019) (405)	0	0		
+81	ADMINISTRACION PUBLICA (régimen 2019) (406)	0	0		
+82	COMPUTACION (régimen 2019) (407)	0	0		
+83	TELECOMUNICACIONES (régimen 2019) (408)	0	0		
+84	ELECTROMECANICA (régimen 2019) (409)	0	0		
+85	MINAS (régimen 2019) (413)	0	0		
+86	PEDAGOGIA DE LOS IDIOMAS NACIONALES Y EXTRANJEROS (régimen 2019) (414)	0	0		
+87	PEDAGOGÍA DE LA ACTIVIDAD FÍSICA Y DEPORTE - presencial (421)	0	0		
+88	INGENIERÍA AUTOMOTRIZ - presencial (régimen 2019) (426)	0	0		
+89	ELECTRICIDAD - presencial (régimen 2019) (428)	0	0		
+90	MAESTRÍA  ACADÉMICA CON TRAYECTORIA PROFESIONAL: ELECTRICIDAD. NO VIGENTE - presencial (429)	0	0		
+91	MAESTRÍA  ACADÉMICA CON TRAYECTORIA PROFESIONAL: TELECOMUNICACIONES - en linea (430)	0	0		
+92	MAESTRÍA  ACADÉMICA CON TRAYECTORIA PROFESIONAL: MINAS - presencial (431)	0	0		
+93	MAESTRÍA  ACADÉMICA CON TRAYECTORIA PROFESIONAL: INGENIERÍA EN SOFTWARE - en linea (432)	0	0		
+94	ADMINISTRACIÓN DE EMPRESAS - distancia (régimen 2019) (433)	0	0		
+95	CONTABILIDAD Y AUDITORÍA - distancia (régimen 2019) (434)	0	0		
+96	DERECHO - distancia (régimen 2019) (435)	0	0		
+97	TRABAJO SOCIAL - distancia (régimen 2019) (436)	0	0		
+98	COMUNICACIÓN - distancia (régimen 2019) (437)	0	0		
+99	EDUCACIÓN INICIAL - distancia (régimen 2019) (438)	0	0		
+100	PSICOPEDAGOGÍA - distancia (régimen 2019) (439)	0	0		
+101	EDUCACIÓN ESPECIAL - presencial (régimen 2019) (440)	0	0		
+102	MAESTRÍA  ACADÉMICA CON TRAYECTORIA PROFESIONAL: EDUCACIÓN INICIAL. (NO VIGENTE) - presencial (441)	0	0		
+103	MAESTRÍA EN EDUCACIÓN (DOCENCIA E INVESTIGACIÓN EN EDUCACIÓN SUPERIOR) - semipresencial (442)	0	0		
+104	MAESTRÍA  ACADÉMICA CON TRAYECTORIA PROFESIONAL: EDUCACIÓN BÁSICA - presencial (443)	0	0		
+105	TRABAJO SOCIAL - presencial (régimen 2019) (444)	0	0		
+106	AGRONEGOCIOS - distancia (régimen 2019) (447)	0	0		
+107	ARTES VISUALES - presencial (régimen 2019) (448)	0	0		
+108	MAESTRÍA ACADÉMICA CON TRAYECTORIA DE INVESTIGACIÓN: SANIDAD ANIMAL - presencial (452)	0	0		
+109	MAESTRÍA EN POLÍTICAS PÚBLICAS - NO VIGENTE - presencial (453)	0	0		
+110	MAESTRÍA  ACADÉMICA CON TRAYECTORIA PROFESIONAL: CONTABILIDAD Y FINANZAS. NO VIGENTE - presencial (454)	0	0		
+111	MAESTRÍA ACADÉMICA CON TRAYECTORIA DE INVESTIGACIÓN: AGROECOLOGÍA Y DESARROLLO SOSTENIBLE. NO VIGENTE - presencial (458)	0	0		
+112	MAESTRÍA ACADÉMICA CON TRAYECTORIA DE INVESTIGACIÓN: BIODIVERSIDAD Y CAMBIO CLIMÁTICO - presencial (459)	0	0		
+113	MAESTRÍA ACADÉMICA CON TRAYECTORIA PROFESIONAL: REPRODUCCIÓN ANIMAL - presencial (460)	0	0		
+114	MAESTRÍA ACADÉMICA CON TRAYECTORIA PROFESIONAL: GESTIÓN DEL TALENTO HUMANO. NO VIGENTE - presencial (461)	0	0		
+115	MAESTRÍA ACADÉMICA CON TRAYECTORIA PROFESIONAL: TURISMO - presencial (462)	0	0		
+116	PEDAGOGÍA DE LAS CIENCIAS EXPERIMENTALES (INFORMÁTICA) - en linea (464)	0	0		
+117	EDUCACIÓN BÁSICA - en linea (régimen 2019) (465)	0	0		
+118	MAESTRÍA EN RESTAURACIÓN DE PAISAJES TROPICALES - presencial (466)	0	0		
+119	MAESTRÍA EN ECONOMÍA Y DIRECCIÓN DE EMPRESAS - en linea (467)	0	0		
+120	MAESTRÍA EN DERECHO CONSTITUCIONAL - en linea (468)	0	0		
+121	MAESTRÍA EN EDUCACIÓN, TECNOLOGÍA E INNOVACIÓN - en linea (469)	0	0		
+122	MAESTRÍA EN EDUCACIÓN (INTERVENCIÓN PSICOPEDAGÓGICA) - en linea (470)	0	0		
+123	MAESTRÍA EN TRABAJO SOCIAL - en linea (471)	0	0		
+124	MAESTRÍA EN EDUCACIÓN (ORIENTACIÓN EDUCATIVA) - en linea (472)	0	0		
+125	ESPECIALIZACIÓN EN MEDICINA FAMILIAR Y COMUNITARIA - presencial (473)	0	0		
+126	MAESTRÍA EN COMUNICACIÓN POLÍTICA - en linea (474)	0	0		
+127	MAESTRÍA EN AGRONEGOCIOS SOSTENIBLES - en linea (475)	0	0		
+128	MAESTRÍA EN CONTABILIDAD Y FINANZAS - en linea (476)	0	0		
+129	MAESTRÍA EN DIRECCIÓN DE EMPRESAS - en linea (477)	0	0		
+130	MAESTRÍA EN EDUCACIÓN (INCLUSIÓN EDUCATIVA Y ATENCIÓN A LA DIVERSIDAD) - en linea (478)	0	0		
+131	MAESTRÍA EN EDUCACIÓN (INNOVACIÓN Y LIDERAZGO EDUCATIVO) - en linea (479)	0	0		
+132	MAESTRÍA EN FINANZAS - semipresencial (480)	0	0		
+133	MAESTRÍA EN DERECHO LABORAL Y SEGURIDAD SOCIAL - presencial (481)	0	0		
+134	MAESTRÍA ACADÉMICA CON TRAYECTORIA PROFESIONAL:  POLÍTICAS PÚBLICAS - en linea (482)	0	0		
+135	MAESTRÍA EN EDUCACIÓN (ENSEÑANZA DE LA  LENGUA Y LITERATURA) - hibrida (483)	0	0		
+136	MAESTRÍA EN EDUCACIÓN ESPECIAL - en linea (484)	0	0		
+137	MAESTRÍA EN AGRONOMÍA (NUTRICIÓN VEGETAL) - presencial (485)	0	0		
+138	MAESTRÍA ACADÉMICA EN CONVERSIÓN DE ENERGÍA Y SOSTENIBILIDAD - hibrida (486)	0	0		
+139	MAESTRÍA ACADÉMICA CON TRAYECTORIA PROFESIONAL: CONTABILIDAD Y FINANZAS - hibrida (487)	0	0		
+140	MAESTRÍA  EN GESTIÓN DEL TALENTO HUMANO - semipresencial (488)	0	0		
+141	MAESTRÍA ACADÉMICA EN DERECHO - en linea (489)	0	0		
+142	MAESTRÍA ACADÉMICA CON TRAYECTORIA PROFESIONAL: EDUCACIÓN INICIAL - en linea (490)	0	0		
+143	MAESTRÍA  ACADÉMICA  EN MEDICINA VETERINARIA - presencial (491)	0	0		
+144	MAESTRÍA  ACADÉMICA  EN PEDAGOGÍA DEL INGLÉS COMO LENGUA EXTRANJERA - en linea (492)	0	0		
+145	MAESTRÍA EN EPIDEMIOLOGÍA - presencial (493)	0	0		
+146	MAESTRÍA EN ENFERMERÍA FAMILIAR Y COMUNITARIA - presencial (494)	0	0		
+147	MAESTRÍA ACADÉMICA EN ARTES MUSICALES - en linea (495)	0	0		
+148	MAESTRÍA ACADÉMICA EN GESTIÓN EDUCATIVA - en linea (496)	0	0		
+149	MAESTRÍA ACADÉMICA EN INGENIERÍA AUTOMOTRÍZ - hibrida (497)	0	0		
+150	MAESTRÍA  ACADÉMICA CON TRAYECTORIA PROFESIONAL: ELECTRICIDAD - hibrida (498)	0	0		
+151	MAESTRÍA ACADÉMICA EN EDUCACION (DOCENCIA SUPERIOR) - en linea (500)	0	0		
+152	MAESTRÍA ACADÉMICA CON TRAYECTORIA DE INVESTIGACIÓN: AGROECOLOGÍA Y DESARROLLO SOSTENIBLE - hibrida (501)	0	0		
+153	MAESTRÍA ACADÉMICA EN PEDAGOGÍA DE LAS CIENCIAS EXPERIMENTALES (MATEMÁTICA Y FÍSICA) - hibrida (502)	0	0		
+154	MAESTRÍA ACADÉMICA EN EDUCACION (EDUCACIÓN FÍSICA Y DEPORTE) - hibrida (503)	0	0		
+155	MAESTRÍA EN PRODUCCIÓN ANIMAL - hibrida (504)	0	0		
+156	Sin respuesta	0	0		
+157	No mostrada	0	0		
+158					
+159					
+160	Resumen de campo para C02				
+161	Nombres del graduado				
+162	Opción	10	1		
+163	Sin respuesta	0	0		
+164	No mostrada	0	0		
+165					
+166					
+167	Resumen de campo para A1				
+168	Nombre de la institución o empresa 				
+169	Opción	10	1		
+170	Sin respuesta	0	0		
+171	No mostrada	0	0		
+172					
+173					
+174	Resumen de campo para A2				
+175	Nombre de la persona que proporciona la información (no obligatorio)				
+176	Opción	3	0.3		
+177	Sin respuesta	7	0.7		
+178	No mostrada	0	0		
+179					
+180					
+181	Resumen de campo para B1				
+182	Con base en su conocimiento como empleador/(a), ¿En qué nivel los graduados de la UNL cumplen los requisitos formales para ser contratados?				
+183	Opción	Cuenta	Porcentaje		
+184	Muy bueno (B2A1)	3	0.3		
+185	Bueno (B2A4)	6	0.6		
+186	Regular (B2A3)	1	0.1		
+187	Malo (B2A2)	0	0		
+188	Sin respuesta	0	0		
+189	No mostrada	0	0		
+190					
+191					
+192	Resumen de campo para B2				
+193	A más de los requisitos formales, ¿Qué aspectos son los que tienen mayor influencia en la contratación de profesionales en la empresa?				
+194	Opción	Cuenta	Porcentaje		
+195	Pertenencia a grupos vulnerables (SQ001)	0	0		
+196	Edad (SQ002)	3	0.3		
+197	Sexo (SQ003)	0	0		
+198	Estado Civil (SQ004)	0	0		
+199	Antecedentes Académicos (SQ005)	2	0.2		
+200	Habilidad en la comunicación oral y escrita (SQ006)	9	0.9		
+201	Disposición para asumir responsabilidades (SQ007)	10	1		
+202	Demanda de profesionales de la carrera, prestigio de la carrera (SQ008)	1	0.1		
+203					
+204					
+205	Resumen de campo para B3				
+206	Según su criterio, ¿Cómo es actualmente la demanada de los profesionales de la carrera ?				
+207	Opción	Cuenta	Porcentaje		
+208	Alta (B4A1)	4	0.4		
+209	Media (B4A2)	6	0.6		
+210	Baja (B4A3)	0	0		
+211	Muy baja (B4A4)	0	0		
+212	Sin respuesta	0	0		
+213	No mostrada	0	0		
+214					
+215					
+216	Resumen de campo para C1				
+217	¿Cuál es el cargo que desempeña actualmente el graduado/(a)?				
+218	Opción	10	1		
+219	Sin respuesta	0	0		
+220	No mostrada	0	0		
+221					
+222					
+223	Resumen de campo para C2				
+224	¿Qúe funciones cumple el graduado/(a) de la UNL, en ese campo?				
+225	Opción	10	1		
+226	Sin respuesta	0	0		
+227	No mostrada	0	0		
+228					
+229					
+230	Resumen de campo para D1(SQ01)				
+231	"Valore los siguientes aspectos relacionados con el desempeño profesional del graduado.
+[Desempeño profesional en general]"				
+232	Opción	Cuenta	Porcentaje		
+233	Muy Bueno (A1)	7	0.7		
+234	Bueno (A2)	3	0.3		
+235	Regular (A3)	0	0		
+236	Malo (A4)	0	0		
+237	Sin respuesta	0	0		
+238	No mostrada	0	0		
+239					
+240					
+241	Resumen de campo para D1(SQ02)				
+242	"Valore los siguientes aspectos relacionados con el desempeño profesional del graduado.
+[Cumplimiento de las funciones y tareas encomendadas, con solvencia profesional (Dominio  científico-técnico de su área de trabajo)]"				
+243	Opción	Cuenta	Porcentaje		
+244	Muy Bueno (A1)	8	0.8		
+245	Bueno (A2)	2	0.2		
+246	Regular (A3)	0	0		
+247	Malo (A4)	0	0		
+248	Sin respuesta	0	0		
+249	No mostrada	0	0		
+250					
+251					
+252	Resumen de campo para D1(SQ03)				
+253	"Valore los siguientes aspectos relacionados con el desempeño profesional del graduado.
+[Cumplimiento de las actividades en los tiempos requeridos (responsabilidad y agilidad)]"				
+254	Opción	Cuenta	Porcentaje		
+255	Muy Bueno (A1)	8	0.8		
+256	Bueno (A2)	2	0.2		
+257	Regular (A3)	0	0		
+258	Malo (A4)	0	0		
+259	Sin respuesta	0	0		
+260	No mostrada	0	0		
+261					
+262					
+263	Resumen de campo para D1(SQ04)				
+264	"Valore los siguientes aspectos relacionados con el desempeño profesional del graduado.
+[Capacidad de resolver problemas]"				
+265	Opción	Cuenta	Porcentaje		
+266	Muy Bueno (A1)	8	0.8		
+267	Bueno (A2)	2	0.2		
+268	Regular (A3)	0	0		
+269	Malo (A4)	0	0		
+270	Sin respuesta	0	0		
+271	No mostrada	0	0		
+272					
+273					
+274	Resumen de campo para D1(SQ05)				
+275	"Valore los siguientes aspectos relacionados con el desempeño profesional del graduado.
+[Comportamiento ético]"				
+276	Opción	Cuenta	Porcentaje		
+277	Muy Bueno (A1)	9	0.9		
+278	Bueno (A2)	1	0.1		
+279	Regular (A3)	0	0		
+280	Malo (A4)	0	0		
+281	Sin respuesta	0	0		
+282	No mostrada	0	0		
+283					
+284					
+285	Resumen de campo para D1(SQ06)				
+286	"Valore los siguientes aspectos relacionados con el desempeño profesional del graduado.
+[Compromiso institucional]"				
+287	Opción	Cuenta	Porcentaje		
+288	Muy Bueno (A1)	9	0.9		
+289	Bueno (A2)	1	0.1		
+290	Regular (A3)	0	0		
+291	Malo (A4)	0	0		
+292	Sin respuesta	0	0		
+293	No mostrada	0	0		
+294					
+295					
+296	Resumen de campo para D1(SQ07)				
+297	"Valore los siguientes aspectos relacionados con el desempeño profesional del graduado.
+[Interés en el desarrollo profesional (disposición para seguir formándose)]"				
+298	Opción	Cuenta	Porcentaje		
+299	Muy Bueno (A1)	9	0.9		
+300	Bueno (A2)	1	0.1		
+301	Regular (A3)	0	0		
+302	Malo (A4)	0	0		
+303	Sin respuesta	0	0		
+304	No mostrada	0	0		
+305					
+306					
+307	Resumen de campo para D1(SQ08)				
+308	"Valore los siguientes aspectos relacionados con el desempeño profesional del graduado.
+[Capacidad para la toma de decisiones]"				
+309	Opción	Cuenta	Porcentaje		
+310	Muy Bueno (A1)	8	0.8		
+311	Bueno (A2)	2	0.2		
+312	Regular (A3)	0	0		
+313	Malo (A4)	0	0		
+314	Sin respuesta	0	0		
+315	No mostrada	0	0		
+316					
+317					
+318	Resumen de campo para D1(SQ09)				
+319	"Valore los siguientes aspectos relacionados con el desempeño profesional del graduado.
+[Desarrollo de una gestión laboral eficaz y eficiente]"				
+320	Opción	Cuenta	Porcentaje		
+321	Muy Bueno (A1)	9	0.9		
+322	Bueno (A2)	1	0.1		
+323	Regular (A3)	0	0		
+324	Malo (A4)	0	0		
+325	Sin respuesta	0	0		
+326	No mostrada	0	0		
+327					
+328					
+329	Resumen de campo para D2 [Capacidad para realizar análisis y diagnósticos.][Etiqueta 1]				
+330	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[A. Nivel de conocimientos, habiidades y actitudes ingresó el graduado al empleo]"				
+331	Opción	Cuenta	Porcentaje		
+332	Muy alto10 (A10)	3	0.3		
+333	9 (A9)	3	0.3		0.7106690545187015
+334	8 (A8)	3	0.3		
+335	7 (A7)	1	0.1		
+336	6 (A6)	0	0		
+337	5 (A5)	0	0		
+338	4 (A4)	0	0		
+339	3 (A3)	0	0		
+340	2 (A2)	0	0		
+341	Muy bajo1 (A1)	0	0		
+342	Sin respuesta	0	0		
+343	No mostrada	0	0		
+344					
+345					
+346	Resumen de campo para D2 [Capacidad para realizar análisis y diagnósticos.][Etiqueta 2]				
+347	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[B. Nivel de conocimientos, habiidades y actitudes que son necesarias en el trabajo que realiza el graduado en la actualidad]"				
+348	Opción	Cuenta	Porcentaje		
+349	Muy alto10 (A10)	7	0.7		
+350	9 (A9)	2	0.2		
+351	8 (A8)	1	0.1		
+352	7 (A7)	0	0		
+353	6 (A6)	0	0		
+354	5 (A5)	0	0		
+355	4 (A4)	0	0		
+356	3 (A3)	0	0		
+357	2 (A2)	0	0		
+358	Muy bajo1 (A1)	0	0		
+359	Sin respuesta	0	0		
+360	No mostrada	0	0		
+361					
+362					
+363	Resumen de campo para D2 [Capacidad para solucionar problemas relacionados con la profesión.][Etiqueta 1]				
+364	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[A. Nivel de conocimientos, habiidades y actitudes ingresó el graduado al empleo]"				
+365	Opción	Cuenta	Porcentaje		
+366	Muy alto10 (A10)	3	0.3		0.5393598899705936
+367	9 (A9)	2	0.2		
+368	8 (A8)	4	0.4		
+369	7 (A7)	1	0.1		
+370	6 (A6)	0	0		
+371	5 (A5)	0	0		
+372	4 (A4)	0	0		
+373	3 (A3)	0	0		
+374	2 (A2)	0	0		
+375	Muy bajo1 (A1)	0	0		
+376	Sin respuesta	0	0		
+377	No mostrada	0	0		
+378					
+379					
+380	Resumen de campo para D2 [Capacidad para solucionar problemas relacionados con la profesión.][Etiqueta 2]				
+381	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[B. Nivel de conocimientos, habiidades y actitudes que son necesarias en el trabajo que realiza el graduado en la actualidad]"				
+382	Opción	Cuenta	Porcentaje		
+383	Muy alto10 (A10)	7	0.7		
+384	9 (A9)	2	0.2		
+385	8 (A8)	0	0		
+386	7 (A7)	1	0.1		
+387	6 (A6)	0	0		
+388	5 (A5)	0	0		
+389	4 (A4)	0	0		
+390	3 (A3)	0	0		
+391	2 (A2)	0	0		
+392	Muy bajo1 (A1)	0	0		
+393	Sin respuesta	0	0		
+394	No mostrada	0	0		
+395					
+396					
+397	Resumen de campo para D2 [Capacidad para utilizar herramientas especializadas propias de la profesión.][Etiqueta 1]				
+398	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[A. Nivel de conocimientos, habiidades y actitudes ingresó el graduado al empleo]"				
+399	Opción	Cuenta	Porcentaje		
+400	Muy alto10 (A10)	4	0.4		0.8276809077511004
+401	9 (A9)	1	0.1		
+402	8 (A8)	3	0.3		
+403	7 (A7)	1	0.1		
+404	6 (A6)	0	0		
+405	5 (A5)	0	0		
+406	4 (A4)	1	0.1		
+407	3 (A3)	0	0		
+408	2 (A2)	0	0		
+409	Muy bajo1 (A1)	0	0		
+410	Sin respuesta	0	0		
+411	No mostrada	0	0		
+412					
+413					
+414	Resumen de campo para D2 [Capacidad para utilizar herramientas especializadas propias de la profesión.][Etiqueta 2]				
+415	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[B. Nivel de conocimientos, habiidades y actitudes que son necesarias en el trabajo que realiza el graduado en la actualidad]"				
+416	Opción	Cuenta	Porcentaje		
+417	Muy alto10 (A10)	7	0.7		
+418	9 (A9)	1	0.1		
+419	8 (A8)	1	0.1		
+420	7 (A7)	0	0		
+421	6 (A6)	0	0		
+422	5 (A5)	0	0		
+423	4 (A4)	0	0		
+424	3 (A3)	0	0		
+425	2 (A2)	0	0		
+426	Muy bajo1 (A1)	0	0		
+427	Sin respuesta	1	0.1		
+428	No mostrada	0	0		
+429					
+430					
+431	Resumen de campo para D2 [Conocimientos sobre la realidad local, regional y nacional.][Etiqueta 1]				
+432	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[A. Nivel de conocimientos, habiidades y actitudes ingresó el graduado al empleo]"				
+433	Opción	Cuenta	Porcentaje		
+434	Muy alto10 (A10)	2	0.2		0.5056498968474317
+435	9 (A9)	4	0.4		
+436	8 (A8)	3	0.3		
+437	7 (A7)	1	0.1		
+438	6 (A6)	0	0		
+439	5 (A5)	0	0		
+440	4 (A4)	0	0		
+441	3 (A3)	0	0		
+442	2 (A2)	0	0		
+443	Muy bajo1 (A1)	0	0		
+444	Sin respuesta	0	0		
+445	No mostrada	0	0		
+446					
+447					
+448	Resumen de campo para D2 [Conocimientos sobre la realidad local, regional y nacional.][Etiqueta 2]				
+449	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[B. Nivel de conocimientos, habiidades y actitudes que son necesarias en el trabajo que realiza el graduado en la actualidad]"				
+450	Opción	Cuenta	Porcentaje		
+451	Muy alto10 (A10)	7	0.7		
+452	9 (A9)	2	0.2		
+453	8 (A8)	1	0.1		
+454	7 (A7)	0	0		
+455	6 (A6)	0	0		
+456	5 (A5)	0	0		
+457	4 (A4)	0	0		
+458	3 (A3)	0	0		
+459	2 (A2)	0	0		
+460	Muy bajo1 (A1)	0	0		
+461	Sin respuesta	0	0		
+462	No mostrada	0	0		
+463					
+464					
+465	Resumen de campo para D2 [Habilidad para encontrar, seleccionar, sistematizar y utilizar información.][Etiqueta 1]				
+466	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[A. Nivel de conocimientos, habiidades y actitudes ingresó el graduado al empleo]"				
+467	Opción	Cuenta	Porcentaje		
+468	Muy alto10 (A10)	4	0.4		0.8528028654224418
+469	9 (A9)	2	0.2		
+470	8 (A8)	2	0.2		
+471	7 (A7)	2	0.2		
+472	6 (A6)	0	0		
+473	5 (A5)	0	0		
+474	4 (A4)	0	0		
+475	3 (A3)	0	0		
+476	2 (A2)	0	0		
+477	Muy bajo1 (A1)	0	0		
+478	Sin respuesta	0	0		
+479	No mostrada	0	0		
+480					
+481					
+482	Resumen de campo para D2 [Habilidad para encontrar, seleccionar, sistematizar y utilizar información.][Etiqueta 2]				
+483	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[B. Nivel de conocimientos, habiidades y actitudes que son necesarias en el trabajo que realiza el graduado en la actualidad]"				
+484	Opción	Cuenta	Porcentaje		
+485	Muy alto10 (A10)	7	0.7		
+486	9 (A9)	1	0.1		
+487	8 (A8)	2	0.2		
+488	7 (A7)	0	0		
+489	6 (A6)	0	0		
+490	5 (A5)	0	0		
+491	4 (A4)	0	0		
+492	3 (A3)	0	0		
+493	2 (A2)	0	0		
+494	Muy bajo1 (A1)	0	0		
+495	Sin respuesta	0	0		
+496	No mostrada	0	0		
+497					
+498					
+499	Resumen de campo para D2 [Capacidad para trabajar en equipo.][Etiqueta 1]				
+500	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[A. Nivel de conocimientos, habiidades y actitudes ingresó el graduado al empleo]"				
+501	Opción	Cuenta	Porcentaje		
+502	Muy alto10 (A10)	6	0.6		0.9284766908852592
+503	9 (A9)	2	0.2		
+504	8 (A8)	1	0.1		
+505	7 (A7)	1	0.1		
+506	6 (A6)	0	0		
+507	5 (A5)	0	0		
+508	4 (A4)	0	0		
+509	3 (A3)	0	0		
+510	2 (A2)	0	0		
+511	Muy bajo1 (A1)	0	0		
+512	Sin respuesta	0	0		
+513	No mostrada	0	0		
+514					
+515					
+516	Resumen de campo para D2 [Capacidad para trabajar en equipo.][Etiqueta 2]				
+517	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[B. Nivel de conocimientos, habiidades y actitudes que son necesarias en el trabajo que realiza el graduado en la actualidad]"				
+518	Opción	Cuenta	Porcentaje		
+519	Muy alto10 (A10)	8	0.8		
+520	9 (A9)	0	0		
+521	8 (A8)	2	0.2		
+522	7 (A7)	0	0		
+523	6 (A6)	0	0		
+524	5 (A5)	0	0		
+525	4 (A4)	0	0		
+526	3 (A3)	0	0		
+527	2 (A2)	0	0		
+528	Muy bajo1 (A1)	0	0		
+529	Sin respuesta	0	0		
+530	No mostrada	0	0		
+531					
+532					
+533	Resumen de campo para D2 [Capacidad para presentar en público resultados, ideas o informes.][Etiqueta 1]				
+534	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[A. Nivel de conocimientos, habiidades y actitudes ingresó el graduado al empleo]"				
+535	Opción	Cuenta	Porcentaje		
+536	Muy alto10 (A10)	3	0.3		
+537	9 (A9)	4	0.4		0.6210590034081188
+538	8 (A8)	2	0.2		
+539	7 (A7)	1	0.1		
+540	6 (A6)	0	0		
+541	5 (A5)	0	0		
+542	4 (A4)	0	0		
+543	3 (A3)	0	0		
+544	2 (A2)	0	0		
+545	Muy bajo1 (A1)	0	0		
+546	Sin respuesta	0	0		
+547	No mostrada	0	0		
+548					
+549					
+550	Resumen de campo para D2 [Capacidad para presentar en público resultados, ideas o informes.][Etiqueta 2]				
+551	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[B. Nivel de conocimientos, habiidades y actitudes que son necesarias en el trabajo que realiza el graduado en la actualidad]"				
+552	Opción	Cuenta	Porcentaje		
+553	Muy alto10 (A10)	7	0.7		
+554	9 (A9)	1	0.1		
+555	8 (A8)	1	0.1		
+556	7 (A7)	1	0.1		
+557	6 (A6)	0	0		
+558	5 (A5)	0	0		
+559	4 (A4)	0	0		
+560	3 (A3)	0	0		
+561	2 (A2)	0	0		
+562	Muy bajo1 (A1)	0	0		
+563	Sin respuesta	0	0		
+564	No mostrada	0	0		
+565					
+566					
+567	Resumen de campo para D2 [Capacidad para utilizar herramientas informáticas y comunicación digital.][Etiqueta 1]				
+568	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[A. Nivel de conocimientos, habiidades y actitudes ingresó el graduado al empleo]"				
+569	Opción	Cuenta	Porcentaje		
+570	Muy alto10 (A10)	6	0.6		0.9131425765341167
+571	9 (A9)	1	0.1		
+572	8 (A8)	3	0.3		
+573	7 (A7)	0	0		
+574	6 (A6)	0	0		
+575	5 (A5)	0	0		
+576	4 (A4)	0	0		
+577	3 (A3)	0	0		
+578	2 (A2)	0	0		
+579	Muy bajo1 (A1)	0	0		
+580	Sin respuesta	0	0		
+581	No mostrada	0	0		
+582					
+583					
+584	Resumen de campo para D2 [Capacidad para utilizar herramientas informáticas y comunicación digital.][Etiqueta 2]				
+585	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[B. Nivel de conocimientos, habiidades y actitudes que son necesarias en el trabajo que realiza el graduado en la actualidad]"				
+586	Opción	Cuenta	Porcentaje		
+587	Muy alto10 (A10)	8	0.8		
+588	9 (A9)	0	0		
+589	8 (A8)	1	0.1		
+590	7 (A7)	1	0.1		
+591	6 (A6)	0	0		
+592	5 (A5)	0	0		
+593	4 (A4)	0	0		
+594	3 (A3)	0	0		
+595	2 (A2)	0	0		
+596	Muy bajo1 (A1)	0	0		
+597	Sin respuesta	0	0		
+598	No mostrada	0	0		
+599					
+600					
+601	Resumen de campo para D2 [Capacidad para redactar informes o documentos.][Etiqueta 1]				
+602	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[A. Nivel de conocimientos, habiidades y actitudes ingresó el graduado al empleo]"				
+603	Opción	Cuenta	Porcentaje		
+604	Muy alto10 (A10)	5	0.5		
+605	9 (A9)	0	0		0.879452954966893
+606	8 (A8)	4	0.4		
+607	7 (A7)	1	0.1		
+608	6 (A6)	0	0		
+609	5 (A5)	0	0		
+610	4 (A4)	0	0		
+611	3 (A3)	0	0		
+612	2 (A2)	0	0		
+613	Muy bajo1 (A1)	0	0		
+614	Sin respuesta	0	0		
+615	No mostrada	0	0		
+616					
+617					
+618	Resumen de campo para D2 [Capacidad para redactar informes o documentos.][Etiqueta 2]				
+619	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[B. Nivel de conocimientos, habiidades y actitudes que son necesarias en el trabajo que realiza el graduado en la actualidad]"				
+620	Opción	Cuenta	Porcentaje		
+621	Muy alto10 (A10)	7	0.7		
+622	9 (A9)	1	0.1		
+623	8 (A8)	2	0.2		
+624	7 (A7)	0	0		
+625	6 (A6)	0	0		
+626	5 (A5)	0	0		
+627	4 (A4)	0	0		
+628	3 (A3)	0	0		
+629	2 (A2)	0	0		
+630	Muy bajo1 (A1)	0	0		
+631	Sin respuesta	0	0		
+632	No mostrada	0	0		
+633					
+634					
+635	Resumen de campo para D2 [Capacidad para el emprendimiento.][Etiqueta 1]				
+636	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[A. Nivel de conocimientos, habiidades y actitudes ingresó el graduado al empleo]"				
+637	Opción	Cuenta	Porcentaje		
+638	Muy alto10 (A10)	4	0.4		EMPRENDIMIENTO
+639	9 (A9)	4	0.4		0.646230327641497
+640	8 (A8)	1	0.1		
+641	7 (A7)	1	0.1		
+642	6 (A6)	0	0		
+643	5 (A5)	0	0		
+644	4 (A4)	0	0		
+645	3 (A3)	0	0		
+646	2 (A2)	0	0		
+647	Muy bajo1 (A1)	0	0		
+648	Sin respuesta	0	0		
+649	No mostrada	0	0		
+650					
+651					
+652	Resumen de campo para D2 [Capacidad para el emprendimiento.][Etiqueta 2]				
+653	"<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">A continuación hay una lista de conocimientos, habilidades y actitudes. Proporcione la siguiente información:</span></span></p>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.1) Columna A:<span style=""color: rgb(0, 0, 0);"">¿Con qué nivel de conocimientos, habilidades y actitudes ingresó el graduado al empleo?</span></span></span></p>
+<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+</span></span>
+<p>
+	<span style=""font-size:12px;""><span style=""font-family:arial,helvetica,sans-serif;"">(D2.2) Columna B:<span style=""color: rgb(0, 0, 0);"">¿Qué nivel de los conocimientos, habilidades y actitudes son necesarios en el trabajo que realiza el graduado en la actualidad?</span></span></span></p>
+<p>
+	 </p>
+<p>
+	 </p>
+<style type=""text/css"">
+@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; direction: ltr; line-height: 120%; text-align: left; orphans: 2; widows: 2 }</style>
+[B. Nivel de conocimientos, habiidades y actitudes que son necesarias en el trabajo que realiza el graduado en la actualidad]"				
+654	Opción	Cuenta	Porcentaje		
+655	Muy alto10 (A10)	7	0.7		
+656	9 (A9)	0	0		
+657	8 (A8)	2	0.2		
+658	7 (A7)	1	0.1		
+659	6 (A6)	0	0		
+660	5 (A5)	0	0		
+661	4 (A4)	0	0		
+662	3 (A3)	0	0		
+663	2 (A2)	0	0		
+664	Muy bajo1 (A1)	0	0		
+665	Sin respuesta	0	0		
+666	No mostrada	0	0		
+667					
+668					
+669	Resumen de campo para E1 [1.]				
+670	¿En qué conocimientos y/o hablidades requeriría mayor capacitación o actualización el graduado/(a) para mejorar su desempeño profesional?				
+671	Opción	10	1		
+672	Sin respuesta	0	0		
+673	No mostrada	0	0		
+674					
+675					
+676	Resumen de campo para E1 [2.]				
+677	¿En qué conocimientos y/o hablidades requeriría mayor capacitación o actualización el graduado/(a) para mejorar su desempeño profesional?				
+678	Opción	10	1		
+679	Sin respuesta	0	0		
+680	No mostrada	0	0		
+681					
+682					
+683	Resumen de campo para E2				
+684	¿Conoce usted si la empresa o institución estaría dispuesta a auspiciar la capacitación o actualización señalada en el ítem anterior?				
+685	Opción	Cuenta	Porcentaje		
+686	Si (E2SQ1)	0	0		
+687	No (E2SQ3)	6	0.6		
+688	En parte (E2SQ2)	4	0.4		
+689	Sin respuesta	0	0		
+690	No mostrada	0	0		

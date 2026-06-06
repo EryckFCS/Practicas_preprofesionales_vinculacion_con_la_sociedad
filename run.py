@@ -1,0 +1,88 @@
+import sys
+from src.orchestrator import run_report_pipeline
+from src.config import CAREER_FILES
+
+def print_banner():
+    print("=" * 60)
+    print("   SISTEMA DE ACTUALIZACIÓN Y VALIDACIÓN DE INFORMES")
+    print("        FACULTAD JURÍDICA, SOCIAL Y ADMINISTRATIVA")
+    print("=" * 60)
+
+def show_menu():
+    print("\nSeleccione una opción de ejecución:")
+    print("  [1] Ejecutar un solo informe (Ej: 35)")
+    print("  [2] Ejecutar rango pendiente (Informes 35 al 46 - Posgrados)")
+    print("  [3] Ejecutar todos los informes (24 al 46)")
+    print("  [4] Salir")
+    print("-" * 60)
+
+def get_valid_choice():
+    while True:
+        try:
+            choice = int(input("Ingrese su opción: "))
+            if choice in [1, 2, 3, 4]:
+                return choice
+            print("Opción inválida. Intente de nuevo.")
+        except ValueError:
+            print("Por favor, ingrese un número.")
+
+def main():
+    print_banner()
+    while True:
+        show_menu()
+        choice = get_valid_choice()
+        
+        if choice == 1:
+            try:
+                report_id = int(input("\nIngrese el número del informe a ejecutar (24-46): "))
+                if report_id in CAREER_FILES:
+                    run_report_pipeline(report_id, force_ingest=True)
+                else:
+                    print(f"Error: El informe {report_id} no está registrado en config.py.")
+            except ValueError:
+                print("Error: Por favor ingrese un número de informe válido.")
+                
+        elif choice == 2:
+            print("\nIniciando ejecución de informes pendientes (35 al 46)...")
+            pending_ids = list(range(35, 47))
+            for rid in pending_ids:
+                if rid in CAREER_FILES:
+                    try:
+                        run_report_pipeline(rid, force_ingest=True)
+                    except Exception as e:
+                        print(f"Error procesando informe {rid}: {e}")
+                else:
+                    print(f"Advertencia: Informe {rid} no registrado en config.py. Saltando.")
+            print("\n¡Ejecución de rango pendiente completada!")
+            
+        elif choice == 3:
+            confirm = input("\n¿Está seguro de querer ejecutar TODOS los 23 informes (24-46)? (s/n): ").strip().lower()
+            if confirm == 's':
+                print("\nIniciando ejecución de todos los informes...")
+                all_ids = sorted(CAREER_FILES.keys())
+                for rid in all_ids:
+                    try:
+                        run_report_pipeline(rid, force_ingest=True)
+                    except Exception as e:
+                        print(f"Error procesando informe {rid}: {e}")
+                print("\n¡Ejecución de todos los informes completada!")
+            else:
+                print("Operación cancelada.")
+                
+        elif choice == 4:
+            print("\nSaliendo del programa. ¡Hasta luego!")
+            sys.exit(0)
+
+if __name__ == "__main__":
+    # If a command line argument is provided, run that directly
+    if len(sys.argv) > 1:
+        try:
+            rid = int(sys.argv[1])
+            if rid in CAREER_FILES:
+                run_report_pipeline(rid, force_ingest=True)
+            else:
+                print(f"Error: Informe {rid} no registrado.")
+        except ValueError:
+            print("Error: Ingrese un número de informe válido como argumento.")
+    else:
+        main()
