@@ -1,0 +1,134 @@
+[
+  {
+    "report_id": 35,
+    "carrera": "MAESTRÍA ACADÉMICA CON TRAYECTORIA PROFESIONAL: REPRODUCCIÓN ANIMAL - presencial",
+    "cohorte": "2025",
+    "poblacion": 14,
+    "muestra": 14,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": true,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 36,
+    "carrera": "MAESTRÍA ACADÉMICA CON TRAYECTORIA DE INVESTIGACIÓN: SANIDAD ANIMAL - presencial",
+    "cohorte": "2025",
+    "poblacion": 15,
+    "muestra": 15,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 37,
+    "carrera": "MAESTRÍA  ACADÉMICA  EN MEDICINA VETERINARIA - presencial",
+    "cohorte": "2025",
+    "poblacion": 14,
+    "muestra": 14,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": true,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 38,
+    "carrera": "MAESTRÍA EN PRODUCCIÓN ANIMAL - hibrida",
+    "cohorte": "2025",
+    "poblacion": 20,
+    "muestra": 20,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 39,
+    "carrera": "MAESTRÍA  ACADÉMICA  EN PEDAGOGÍA DEL INGLÉS COMO LENGUA EXTRANJERA - en linea",
+    "cohorte": "2025",
+    "poblacion": 20,
+    "muestra": 20,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 40,
+    "carrera": "MAESTRÍA EN EDUCACIÓN ESPECIAL - en linea",
+    "cohorte": "2025",
+    "poblacion": 25,
+    "muestra": 25,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 41,
+    "carrera": "MAESTRÍA  ACADÉMICA CON TRAYECTORIA PROFESIONAL: EDUCACIÓN BÁSICA - presencial",
+    "cohorte": "2025",
+    "poblacion": 11,
+    "muestra": 11,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 42,
+    "carrera": "MAESTRÍA ACADÉMICA CON TRAYECTORIA PROFESIONAL: EDUCACIÓN INICIAL - en linea",
+    "cohorte": "2025",
+    "poblacion": 10,
+    "muestra": 10,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 43,
+    "carrera": "MAESTRÍA EN EDUCACIÓN (ENSEÑANZA DE LA  LENGUA Y LITERATURA) - hibrida",
+    "cohorte": "2025",
+    "poblacion": 20,
+    "muestra": 20,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 44,
+    "carrera": "MAESTRÍA EN EDUCACIÓN (DOCENCIA E INVESTIGACIÓN EN EDUCACIÓN SUPERIOR) - semipresencial",
+    "cohorte": "2025",
+    "poblacion": 31,
+    "muestra": 31,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 45,
+    "carrera": "MAESTRÍA ACADÉMICA EN GESTIÓN EDUCATIVA - en linea",
+    "cohorte": "2025",
+    "poblacion": 18,
+    "muestra": 18,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 46,
+    "carrera": "MAESTRÍA ACADÉMICA EN EDUCACION (DOCENCIA SUPERIOR) - en linea",
+    "cohorte": "2025",
+    "poblacion": 53,
+    "muestra": 53,
+    "indicadores_poblacion": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  }
+]

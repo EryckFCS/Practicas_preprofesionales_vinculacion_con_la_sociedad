@@ -157,3 +157,7 @@ CAREER_FILES = {
 def is_postgraduate(report_id):
     """Returns True if the report corresponds to a Postgraduate/Masters program."""
     return report_id >= 35
+
+def get_report_category(report_id):
+    """Returns the execution category used to separate outputs and batch runs."""
+    return "posgrado" if is_postgraduate(report_id) else "pregrado"

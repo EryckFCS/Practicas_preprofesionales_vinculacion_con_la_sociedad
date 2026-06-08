@@ -1,6 +1,12 @@
 from src.ingest import ingest_career_data
 from src.extractor import extract_all_data
 from src.updater import update_report
+from src.config import get_report_category
+
+def run_report_batch(report_ids, force_ingest=False):
+    """Runs the pipeline for a sequence of reports, keeping category-separated outputs handled by the updater."""
+    for report_id in report_ids:
+        run_report_pipeline(report_id, force_ingest=force_ingest)
 
 def run_report_pipeline(report_id, force_ingest=False, target_docx_path=None):
     """
@@ -8,6 +14,7 @@ def run_report_pipeline(report_id, force_ingest=False, target_docx_path=None):
     """
     print("\n==================================================")
     print(f"Starting pipeline for Report ID {report_id}...")
+    print(f"[Orchestrator] Execution category: {get_report_category(report_id)}")
     print("==================================================")
     
     # 1. Ingest Excel and Open Questions databases to Parquet

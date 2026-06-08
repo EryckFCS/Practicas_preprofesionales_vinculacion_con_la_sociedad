@@ -1,0 +1,12 @@
+report_id,carrera,cohorte,poblacion,muestra,muestra_eq_14,muestra_gt_poblacion,poblacion_eq_muestra_mul2,error
+24,Contabilidad y Auditoría - presencial,2023,28,52,False,True,False,
+25,Derecho - presencial,2023,28,68,False,True,False,
+26,Economía,2023,28,28,False,False,False,
+27,ENFERMERIA (régimen 2019),2023,28,53,False,True,False,
+28,LABORATORIO CLINICO (régimen 2019),2023,28,35,False,True,False,
+29,Medicina Humana,2023,28,98,False,True,False,
+30,ODONTOLOGIA (régimen 2019),2023,28,31,False,True,False,
+31,PSICOLOGIA CLINICA (régimen 2019),2023,28,43,False,True,False,
+32,Administración de Empresas - distancia,2023,28,22,False,False,False,
+33,Contabilidad y Auditoría - distancia,2023,28,12,False,False,False,
+34,Derecho - distancia,2023,28,23,False,False,False,

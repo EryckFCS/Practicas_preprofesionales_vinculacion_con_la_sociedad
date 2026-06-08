@@ -1,7 +1,14 @@
 import os
+import logging
 import pandas as pd
 import unicodedata
 from src.config import PARQUET_CACHE_DIR, CAREER_FILES
+
+# Module logger
+logger = logging.getLogger(__name__)
+if not logger.handlers:
+    # Basic configuration if not already configured by caller
+    logging.basicConfig(level=logging.INFO)
 
 def clean_label(text):
     """Normalizes text by removing accents, converting to lowercase, and stripping whitespace."""
@@ -32,18 +39,21 @@ def safe_int(val, default=0):
 
 def extract_metadata(report_id, parquet_dir):
     """Extracts general metadata (population N, sample size n) from demografico and indicadores sheets."""
+    # Preferred source: demografico.parquet (single source of truth)
     muestra = 0
+    poblacion = 0
     dem_file = os.path.join(parquet_dir, "demografico.parquet")
+    ind_file = os.path.join(parquet_dir, "indicadores.parquet")
+
+    dem_muestra = 0
     if os.path.exists(dem_file):
         df_dem = pd.read_parquet(dem_file)
         if len(df_dem) > 0:
             # Row 0 contains 'n_de_graduados' (total sample size under the cohorte heading)
-            val = df_dem.iloc[0].get('n_de_graduados', 0)
-            muestra = safe_int(val)
-            
-    # Read population N from indicadores.parquet
-    poblacion = 0
-    ind_file = os.path.join(parquet_dir, "indicadores.parquet")
+            dem_val = df_dem.iloc[0].get('n_de_graduados', 0)
+            dem_muestra = safe_int(dem_val)
+
+    ind_poblacion = 0
     if os.path.exists(ind_file):
         df_ind = pd.read_parquet(ind_file)
         for idx, row in df_ind.iterrows():
@@ -54,16 +64,53 @@ def extract_metadata(report_id, parquet_dir):
                     if col in df_ind.columns:
                         val = safe_int(row.get(col, 0))
                         if val > 0:
-                            poblacion = val
+                            ind_poblacion = val
                             break
-                if poblacion > 0:
+                if ind_poblacion > 0:
                     break
-                    
-    # Fallbacks if still 0
-    if muestra == 0:
-        muestra = 14  # Default sensible fallback
-    if poblacion == 0:
-        poblacion = muestra * 2  # Default sensible fallback
+
+    # Apply policy: demografico.parquet is the single truth for final report sample size
+    if dem_muestra > 0:
+        muestra = dem_muestra
+        if ind_poblacion > 0:
+            poblacion = ind_poblacion
+        else:
+            poblacion = dem_muestra
+        if ind_poblacion > 0 and ind_poblacion != dem_muestra:
+            logger.info(
+                "Report %s: demografico.muestra=%s differs from indicadores.poblacion=%s",
+                report_id,
+                dem_muestra,
+                ind_poblacion,
+            )
+        else:
+            logger.info("Report %s: using demografico.muestra=%s for report metadata", report_id, dem_muestra)
+    else:
+        # Fall back to previously used strategy when demografico is missing
+        muestra = 0
+        poblacion = 0
+        # try demografico for muestra if possible (redundant but safe)
+        if os.path.exists(dem_file):
+            try:
+                df_dem = pd.read_parquet(dem_file)
+                if len(df_dem) > 0:
+                    val = df_dem.iloc[0].get('n_de_graduados', 0)
+                    muestra = safe_int(val)
+            except Exception:
+                muestra = 0
+
+        # try indicadores for poblacion
+        if ind_poblacion > 0:
+            poblacion = ind_poblacion
+            logger.info("Report %s: poblacion taken from indicadores.parquet = %s", report_id, poblacion)
+
+        # Fallbacks if still 0
+        if muestra == 0:
+            muestra = 14  # Default sensible fallback
+            logger.warning("Report %s: 'muestra' not found in parquet cache, applying fallback muestra=14", report_id)
+        if poblacion == 0:
+            poblacion = muestra * 2  # Default sensible fallback
+            logger.warning("Report %s: 'poblacion' not found in parquet cache, applying fallback poblacion=%s", report_id, poblacion)
         
     return {
         "poblacion": poblacion,
@@ -430,7 +477,63 @@ def parse_section(df, section_name):
             'count': int(count.split('.')[0]) if count != 'nan' and count != '' else 0,
             'pct': float(pct) if pct != 'nan' and pct != '' else 0.0
         }
+
+    # If all pct values are 0 but counts exist, compute pct from total (postgrad datae issue)
+    total_count = sum(v['count'] for v in results.values())
+    if total_count > 0 and all(v['pct'] == 0.0 for v in results.values()):
+        for key in results:
+            results[key]['pct'] = results[key]['count'] / total_count
+
     return results
+
+def _extract_employer_total_from_d1(df):
+    """Computes total employer respondents from D1(SQ01) section counts."""
+    vals = df.iloc[:, 0].astype(str).tolist()
+    for i, v in enumerate(vals):
+        if 'Resumen de campo para D1(SQ01)' in v:
+            op_idx = None
+            for j in range(i + 1, min(i + 5, len(df))):
+                if str(df.iloc[j, 0]).strip().lower() == 'opción':
+                    op_idx = j
+                    break
+            if op_idx is not None:
+                total = 0
+                for k in range(op_idx + 1, min(op_idx + 10, len(df))):
+                    v0 = str(df.iloc[k, 0]).strip()
+                    if v0 == 'nan' or v0 == '' or 'resumen de campo' in v0.lower():
+                        break
+                    cnt = str(df.iloc[k, 1]).strip()
+                    try:
+                        total += int(cnt.split('.')[0])
+                    except Exception:
+                        pass
+                if total > 0:
+                    return total
+    return 0
+
+
+def _extract_text_section(df, section_name):
+    """Extracts free-text answers from a datae section (e.g., C2, C3, E1)."""
+    vals = df.iloc[:, 0].astype(str).tolist()
+    answers = []
+    for i, v in enumerate(vals):
+        if section_name in v:
+            # Skip the question row and 'Opción' header, collect text answers
+            for j in range(i + 2, min(i + 80, len(df))):
+                v0 = str(df.iloc[j, 0]).strip()
+                if 'resumen de campo' in v0.lower():
+                    break
+                if v0 and v0.lower() not in ['nan', '', 'opción', 'sin respuesta', 'no mostrada']:
+                    # Also try col_1 which may have the text content
+                    v1 = str(df.iloc[j, 1]).strip() if len(df.columns) > 1 else ''
+                    text = v0 if len(v0) > 5 else v1
+                    if text and text.lower() not in ['nan', '', 'sin respuesta', 'no mostrada', '0', '1']:
+                        cleaned = text.replace('_x000D_', '').strip()
+                        if cleaned and cleaned not in answers:
+                            answers.append(cleaned)
+            break
+    return answers
+
 
 def extract_employer_data(parquet_dir):
     parquet_path = os.path.join(parquet_dir, "datae.parquet")
@@ -446,16 +549,106 @@ def extract_employer_data(parquet_dir):
     for i in range(1, 10):
         sec_name = f"Resumen de campo para D1(SQ0{i})"
         d1[f"sq{i}"] = parse_section(df, sec_name)
-        
+
+    # Total employer respondents (from D1 SQ01 counts if B1 totals zero)
+    total_employers = sum(v.get('count', 0) for v in b1.values())
+    if total_employers == 0:
+        total_employers = _extract_employer_total_from_d1(df)
+
+    # Extract employer cargos/funciones from datae C sections (for postgrad where parquet has 0 rows)
+    employer_cargos_datae = _extract_text_section(df, "Resumen de campo para C2")
+    employer_funciones_datae = _extract_text_section(df, "Resumen de campo para C3")
+
+    # Employer training suggestions from datae E1 section
+    employer_training_datae = _extract_text_section(df, "Resumen de campo para E1")
+
     return {
         "b1": b1,
         "b2": b2,
         "b3": b3,
-        "d1": d1
+        "d1": d1,
+        "total_employers": total_employers,
+        "employer_cargos_datae": employer_cargos_datae,
+        "employer_funciones_datae": employer_funciones_datae,
+        "employer_training_datae": employer_training_datae,
     }
 
+import re
+
+SPANISH_CORRECTIONS = {
+    r"\bpractica\b": "práctica",
+    r"\bgestión publica\b": "gestión pública",
+    r"\bgestion publica\b": "gestión pública",
+    r"\bcontratacion publica\b": "contratación pública",
+    r"\bcontratación publica\b": "contratación pública",
+    r"\bconocimiento tecnologicos\b": "conocimientos tecnológicos",
+    r"\bconocimiento tecnológicos\b": "conocimientos tecnológicos",
+    r"\bconocimientos tecnologicos\b": "conocimientos tecnológicos",
+    r"\bconocimiento tecnologico\b": "conocimientos tecnológicos",
+    r"\btramites\b": "trámites",
+    r"\bredaccion\b": "redacción",
+    r"\bhablidades\b": "habilidades",
+    r"\binteligencia artif\b": "inteligencia artificial",
+    r"\bentorno juridico\b": "entorno jurídico",
+    r"\btecnicas de litigacion\b": "técnicas de litigación",
+    r"\blitigacion oral\b": "litigación oral",
+    r"\blitigación oral\b": "litigación oral",
+    r"\boratoria juridica\b": "oratoria jurídica",
+    r"\boratoria jurídica\b": "oratoria jurídica",
+    r"\bcodigo\b": "código",
+    r"\bde lo contencioso administrativo\b": "de lo contencioso-administrativo",
+    r"\bpenal\b": "penal",
+    r"\bnotarial\b": "notarial",
+    r"\btributario\b": "tributario",
+    r"\bsocietario\b": "societario",
+    r"\bconstitucional\b": "constitucional",
+    r"\bmercantil\b": "mercantil",
+    r"\bcootad\b": "COOTAD",
+    r"\bunl\b": "UNL",
+    r"\biess\b": "IESS",
+    r"\bsn\b": "",
+    r"\bde genero\b": "de género",
+    r"\bviolencia política de género\b": "violencia política de género",
+}
+
+def correct_spanish_spelling(text):
+    if not text:
+        return ""
+    text = re.sub(r"\s+", " ", text).strip()
+    if len(text) > 0:
+        upper_ratio = sum(1 for c in text if c.isupper()) / len(text)
+        if text.isupper() or upper_ratio > 0.4:
+            text = text.lower()
+    for pattern, replacement in SPANISH_CORRECTIONS.items():
+        text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
+    if text:
+        text = text[0].upper() + text[1:]
+    text = re.sub(r"\bderecho\b", "Derecho", text, flags=re.IGNORECASE)
+    for acr in ["COOTAD", "UNL", "IESS", "RUC", "RIMPE"]:
+        text = re.sub(rf"\b{acr}\b", acr, text, flags=re.IGNORECASE)
+    return text.strip()
+
+def is_valid_open_answer(text):
+    if not text:
+        return False
+    t_low = text.lower().strip()
+    if len(t_low) <= 2 and t_low not in ["si", "no"]:
+        return False
+    placeholders = {
+        "nan", "sn", "s/n", "ninguno", "ninguna", "sin respuesta", "sin comentarios", 
+        "no aplica", "n/a", "no", "ninguno.", "ninguno/a", "ninguna de las anteriores",
+        "no registra", "s", "n", "gf", "ningun", "ninguno/as", "ninguna.", "no aplica.",
+        "sin observaciones", "ninguna observación", "ninguna observacion", "no, ninguna",
+        "ninguno, todo bien", "ninguno, todo excelente", "ninguno/a.", "ningun comentario"
+    }
+    if t_low in placeholders:
+        return False
+    if "más preguntas" in t_low or "¿cuál es la importancia" in t_low or "¿por qué es necesario" in t_low or "¿cuál es el papel" in t_low:
+        return False
+    return True
+
 def extract_open_questions(parquet_dir):
-    """Extracts all non-empty open question text answers."""
+    """Extracts all non-empty open question text answers with spelling corrections."""
     open_data = {}
     if not os.path.exists(parquet_dir):
         return open_data
@@ -474,19 +667,17 @@ def extract_open_questions(parquet_dir):
                     
                     for a in df[col_cargos].dropna().tolist():
                         a_str = str(a).replace("_x000D_", "").strip()
-                        if (a_str and 
-                            a_str.lower() not in ["nan", "sn", "ninguno", "ninguna", "sin respuesta", "no aplica", "n/a", "no", "ninguno."]
-                            and a_str != ""):
-                            if a_str not in cargos:
-                                cargos.append(a_str)
+                        if is_valid_open_answer(a_str):
+                            corrected = correct_spanish_spelling(a_str)
+                            if corrected and corrected not in cargos:
+                                cargos.append(corrected)
                     
                     for a in df[col_funciones].dropna().tolist():
                         a_str = str(a).replace("_x000D_", "").strip()
-                        if (a_str and 
-                            a_str.lower() not in ["nan", "sn", "ninguno", "ninguna", "sin respuesta", "no aplica", "n/a", "no", "ninguno."]
-                            and a_str != ""):
-                            if a_str not in funciones:
-                                funciones.append(a_str)
+                        if is_valid_open_answer(a_str):
+                            corrected = correct_spanish_spelling(a_str)
+                            if corrected and corrected not in funciones:
+                                funciones.append(corrected)
                 
                 open_data["employer_cargos"] = cargos
                 open_data["employer_funciones"] = funciones
@@ -498,12 +689,10 @@ def extract_open_questions(parquet_dir):
                 raw_answers = df[col].dropna().tolist()
                 for a in raw_answers:
                     a_str = str(a).replace("_x000D_", "").strip()
-                    # Clean up common empty/unwanted values
-                    if (a_str and 
-                        a_str.lower() not in ["nan", "sn", "ninguno", "ninguna", "sin respuesta", "sin comentarios", "no aplica", "n/a", "no", "ninguno."]
-                        and a_str != ""):
-                        if a_str not in answers:
-                            answers.append(a_str)
+                    if is_valid_open_answer(a_str):
+                        corrected = correct_spanish_spelling(a_str)
+                        if corrected and corrected not in answers:
+                            answers.append(corrected)
             
             key_name = file.replace("pregunta_abierta_", "").replace(".parquet", "")
             open_data[key_name] = answers
@@ -558,6 +747,68 @@ def extract_correlation_data(parquet_dir):
         'empleadores': emp_data
     }
 
+def extract_satisfaccion(parquet_dir):
+    """Extracts satisfaction with teaching-learning process and profile of egress from satisfaccion.parquet."""
+    path = os.path.join(parquet_dir, "satisfaccion.parquet")
+    if not os.path.exists(path):
+        return {}
+
+    df = pd.read_parquet(path)
+    data = {
+        # Perfil de egreso frequencies/percents
+        "pe_resultados_buena_freq": 0, "pe_resultados_buena_pct": 0.0,
+        "pe_resultados_regular_freq": 0, "pe_resultados_regular_pct": 0.0,
+        "pe_resultados_mala_freq": 0, "pe_resultados_mala_pct": 0.0,
+        "pe_resultados_no_mostrada_freq": 0, "pe_resultados_no_mostrada_pct": 0.0,
+        "pe_cumplimiento_buena_freq": 0, "pe_cumplimiento_buena_pct": 0.0,
+        "pe_cumplimiento_regular_freq": 0, "pe_cumplimiento_regular_pct": 0.0,
+        "pe_cumplimiento_mala_freq": 0, "pe_cumplimiento_mala_pct": 0.0,
+        "pe_cumplimiento_no_mostrada_freq": 0, "pe_cumplimiento_no_mostrada_pct": 0.0,
+    }
+
+    # Locate Pertinencia de los resultados de aprendizaje
+    res_idx = None
+    cump_idx = None
+    for idx, row in df.iterrows():
+        val = str(row.iloc[0]).strip().lower()
+        if "resultados de aprendizaje" in val or "resultados de aprnedizaje" in val:
+            res_idx = idx
+        elif "cumplimiento del perfil" in val:
+            cump_idx = idx
+
+    # If not found by name, fallback to expected indexes (20 for resultados, 24 for cumplimiento)
+    if res_idx is None:
+        res_idx = 20
+    if cump_idx is None:
+        cump_idx = 24
+
+    # Result categories: row res_idx is Buena, res_idx+1 is Regular, res_idx+2 is Mala, res_idx+3 is No mostrada
+    try:
+        data["pe_resultados_buena_freq"] = safe_int(df.iloc[res_idx, 2])
+        data["pe_resultados_buena_pct"] = safe_float(df.iloc[res_idx, 3])
+        data["pe_resultados_regular_freq"] = safe_int(df.iloc[res_idx+1, 2])
+        data["pe_resultados_regular_pct"] = safe_float(df.iloc[res_idx+1, 3])
+        data["pe_resultados_mala_freq"] = safe_int(df.iloc[res_idx+2, 2])
+        data["pe_resultados_mala_pct"] = safe_float(df.iloc[res_idx+2, 3])
+        data["pe_resultados_no_mostrada_freq"] = safe_int(df.iloc[res_idx+3, 2])
+        data["pe_resultados_no_mostrada_pct"] = safe_float(df.iloc[res_idx+3, 3])
+    except Exception as e:
+        logger.warning(f"Error parsing resultados de aprendizaje: {e}")
+
+    try:
+        data["pe_cumplimiento_buena_freq"] = safe_int(df.iloc[cump_idx, 2])
+        data["pe_cumplimiento_buena_pct"] = safe_float(df.iloc[cump_idx, 3])
+        data["pe_cumplimiento_regular_freq"] = safe_int(df.iloc[cump_idx+1, 2])
+        data["pe_cumplimiento_regular_pct"] = safe_float(df.iloc[cump_idx+1, 3])
+        data["pe_cumplimiento_mala_freq"] = safe_int(df.iloc[cump_idx+2, 2])
+        data["pe_cumplimiento_mala_pct"] = safe_float(df.iloc[cump_idx+2, 3])
+        data["pe_cumplimiento_no_mostrada_freq"] = safe_int(df.iloc[cump_idx+3, 2])
+        data["pe_cumplimiento_no_mostrada_pct"] = safe_float(df.iloc[cump_idx+3, 3])
+    except Exception as e:
+        logger.warning(f"Error parsing cumplimiento del perfil: {e}")
+
+    return data
+
 def extract_all_data(report_id):
     """Main extraction driver for a given report_id."""
     parquet_dir = os.path.join(PARQUET_CACHE_DIR, str(report_id))
@@ -575,8 +826,10 @@ def extract_all_data(report_id):
     dataset["employer"] = extract_employer_data(parquet_dir)
     dataset["correlation"] = extract_correlation_data(parquet_dir)
     dataset["insercion"] = extract_insercion_laboral(parquet_dir)
+    dataset["satisfaccion"] = extract_satisfaccion(parquet_dir)
     
     return dataset
+
 
 if __name__ == "__main__":
     # Test print demographics of Career 35

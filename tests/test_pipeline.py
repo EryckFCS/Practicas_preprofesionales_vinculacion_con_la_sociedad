@@ -29,7 +29,7 @@ class TestPipeline(unittest.TestCase):
         data = extract_all_data(35)
         
         # Check metadata
-        self.assertEqual(data["metadata"]["poblacion"], 28)
+        self.assertEqual(data["metadata"]["poblacion"], 14)
         self.assertEqual(data["metadata"]["muestra"], 14)
         self.assertEqual(data["metadata"]["cohorte"], "2025")
         
@@ -73,7 +73,7 @@ class TestPipeline(unittest.TestCase):
             cells_t0_poblacion = [row.cells[-1].text.strip() for row in t0.rows if "población" in "".join([c.text.lower() for c in row.cells])]
             cells_t0_muestra = [row.cells[-1].text.strip() for row in t0.rows if "encuestados" in "".join([c.text.lower() for c in row.cells])]
             
-            self.assertEqual(cells_t0_poblacion[0], "28")
+            self.assertEqual(cells_t0_poblacion[0], "14")
             self.assertEqual(cells_t0_muestra[0], "14")
             
             # Verify Table 4 demographics Male cell

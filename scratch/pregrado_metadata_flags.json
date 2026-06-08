@@ -1,0 +1,112 @@
+[
+  {
+    "report_id": 24,
+    "carrera": "Contabilidad y Auditoría - presencial",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 52,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": true,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 25,
+    "carrera": "Derecho - presencial",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 68,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": true,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 26,
+    "carrera": "Economía",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 28,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 27,
+    "carrera": "ENFERMERIA (régimen 2019)",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 53,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": true,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 28,
+    "carrera": "LABORATORIO CLINICO (régimen 2019)",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 35,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": true,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 29,
+    "carrera": "Medicina Humana",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 98,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": true,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 30,
+    "carrera": "ODONTOLOGIA (régimen 2019)",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 31,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": true,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 31,
+    "carrera": "PSICOLOGIA CLINICA (régimen 2019)",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 43,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": true,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 32,
+    "carrera": "Administración de Empresas - distancia",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 22,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 33,
+    "carrera": "Contabilidad y Auditoría - distancia",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 12,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  },
+  {
+    "report_id": 34,
+    "carrera": "Derecho - distancia",
+    "cohorte": "2023",
+    "poblacion": 28,
+    "muestra": 23,
+    "muestra_eq_14": false,
+    "muestra_gt_poblacion": false,
+    "poblacion_eq_muestra_mul2": false
+  }
+]
