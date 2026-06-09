@@ -2,7 +2,7 @@ import os
 import logging
 import pandas as pd
 import unicodedata
-from src.config import PARQUET_CACHE_DIR, CAREER_FILES
+from src.config import PARQUET_CACHE_DIR, CAREER_FILES, is_postgraduate
 
 # Module logger
 logger = logging.getLogger(__name__)
@@ -72,11 +72,11 @@ def extract_metadata(report_id, parquet_dir):
     # Apply policy: demografico.parquet is the single truth for final report sample size
     if dem_muestra > 0:
         muestra = dem_muestra
-        if ind_poblacion > 0:
+        if ind_poblacion > 0 and not is_postgraduate(report_id):
             poblacion = ind_poblacion
         else:
             poblacion = dem_muestra
-        if ind_poblacion > 0 and ind_poblacion != dem_muestra:
+        if ind_poblacion > 0 and not is_postgraduate(report_id) and ind_poblacion != dem_muestra:
             logger.info(
                 "Report %s: demografico.muestra=%s differs from indicadores.poblacion=%s",
                 report_id,
@@ -775,6 +775,65 @@ def extract_satisfaccion(parquet_dir):
             res_idx = idx
         elif "cumplimiento del perfil" in val:
             cump_idx = idx
+
+    is_pg = False
+    try:
+        is_pg = is_postgraduate(int(os.path.basename(parquet_dir)))
+    except:
+        pass
+
+    # For postgraduate reports, the satisfaction data resides in datag.parquet instead of satisfaccion.parquet
+    if is_pg or (res_idx is None and cump_idx is None):
+        datag_path = os.path.join(parquet_dir, "datag.parquet")
+        if os.path.exists(datag_path):
+            try:
+                df_g = pd.read_parquet(datag_path)
+                col0 = df_g.columns[0]
+                for idx_g, val_g in enumerate(df_g[col0].astype(str).tolist()):
+                    val_lower = val_g.lower()
+                    if "resultados de aprendizaje" in val_lower or "resultados de aprnedizaje" in val_lower:
+                        # parse option rows
+                        for i in range(idx_g + 1, min(idx_g + 7, len(df_g))):
+                            opt = str(df_g.iloc[i, 0]).lower()
+                            if "opción" in opt:
+                                continue
+                            cnt = safe_int(df_g.iloc[i, 1])
+                            pct = safe_float(df_g.iloc[i, 2])
+                            if "buena" in opt:
+                                data["pe_resultados_buena_freq"] = cnt
+                                data["pe_resultados_buena_pct"] = pct
+                            elif "regular" in opt:
+                                data["pe_resultados_regular_freq"] = cnt
+                                data["pe_resultados_regular_pct"] = pct
+                            elif "mala" in opt:
+                                data["pe_resultados_mala_freq"] = cnt
+                                data["pe_resultados_mala_pct"] = pct
+                            elif "no mostrada" in opt or "sin respuesta" in opt:
+                                data["pe_resultados_no_mostrada_freq"] += cnt
+                                data["pe_resultados_no_mostrada_pct"] += pct
+                    elif "cumplimiento del perfil" in val_lower:
+                        # parse option rows
+                        for i in range(idx_g + 1, min(idx_g + 7, len(df_g))):
+                            opt = str(df_g.iloc[i, 0]).lower()
+                            if "opción" in opt:
+                                continue
+                            cnt = safe_int(df_g.iloc[i, 1])
+                            pct = safe_float(df_g.iloc[i, 2])
+                            if "buena" in opt:
+                                data["pe_cumplimiento_buena_freq"] = cnt
+                                data["pe_cumplimiento_buena_pct"] = pct
+                            elif "regular" in opt:
+                                data["pe_cumplimiento_regular_freq"] = cnt
+                                data["pe_cumplimiento_regular_pct"] = pct
+                            elif "mala" in opt:
+                                data["pe_cumplimiento_mala_freq"] = cnt
+                                data["pe_cumplimiento_mala_pct"] = pct
+                            elif "no mostrada" in opt or "sin respuesta" in opt:
+                                data["pe_cumplimiento_no_mostrada_freq"] += cnt
+                                data["pe_cumplimiento_no_mostrada_pct"] += pct
+                return data
+            except Exception as e:
+                logger.warning(f"Error parsing datag fallback for satisfaction: {e}")
 
     # If not found by name, fallback to expected indexes (20 for resultados, 24 for cumplimiento)
     if res_idx is None:

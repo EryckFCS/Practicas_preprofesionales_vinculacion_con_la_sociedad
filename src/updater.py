@@ -1075,6 +1075,59 @@ def rewrite_paragraphs(report_id, doc, data):
                     f"  [Paragraph] Replaced 'Analisis' placeholder with dynamic Table 7 analysis in paragraph {idx}."
                 )
 
+        # 16b. Q6.5 Reason for unemployment — bullet list from open question B10
+        elif (
+            "la razón de uno de los graduados" in text.lower()
+            or (idx > 0 and "razon" in text.lower() and text.replace(".", "").replace("…", "").strip().lower() in ["la razón de uno de los graduados"])
+        ):
+            razones = data.get("open_questions", {}).get("b10_razon_porque_no_trabajo", [])
+            if razones:
+                insertions.append(
+                    (
+                        idx,
+                        razones,
+                        f"Las razones por las cuales los {graduado_term} no han podido conseguir trabajo incluyen:",
+                    )
+                )
+                print(f"  [Paragraph] Queued unemployment reasons for insertion below paragraph {idx}.")
+            else:
+                para.text = f"Los {graduado_term} que se encuentran sin empleo no indicaron una razón específica en los datos disponibles."
+                print(f"  [Paragraph] Set fallback for unemployment reasons paragraph {idx}.")
+
+        # 16c. Placeholder paragraphs 'La razón de …' that only contain ellipsis-like text
+        elif (
+            idx > 0
+            and text.strip() != ""
+            and text.replace(".", "").replace("…", "").strip().lower() in ["la razón de uno de los graduados", "la razón de uno de los maestrantes"]
+        ):
+            razones = data.get("open_questions", {}).get("b10_razon_porque_no_trabajo", [])
+            if razones:
+                insertions.append(
+                    (
+                        idx,
+                        razones,
+                        f"Las razones por las cuales los {graduado_term} no han podido conseguir trabajo incluyen:",
+                    )
+                )
+                print(f"  [Paragraph] Queued unemployment reasons (ellipsis) for insertion below paragraph {idx}.")
+            else:
+                para.text = f"Los {graduado_term} que se encuentran sin empleo no indicaron una razón específica en los datos disponibles."
+
+        # 16d. Wrong program name: replace generic references to old undergrad program
+        elif (
+            is_pg
+            and ("ingeniería agrícola" in text.lower() or "ing. agrícola" in text.lower())
+            and "demanda" in text.lower()
+        ):
+            carrera = data["metadata"]["carrera"]
+            new_text = (
+                f"Esta dimensión recoge la percepción de los propios {graduado_term} sobre la demanda actual de profesionales de la "
+                f"{carrera} en el mercado laboral local y nacional, así como la valoración de los empleadores "
+                f"respecto a la demanda de este tipo de profesionales en sus organizaciones."
+            )
+            para.text = new_text
+            print(f"  [Paragraph] Fixed wrong program name in demand paragraph {idx}.")
+
         # 18. Apoyo Institucional para estudios de posgrado
         elif (
             "apoyo institucional para el financiamiento" in text.lower()
@@ -1283,6 +1336,86 @@ def rewrite_paragraphs(report_id, doc, data):
                         )
                     )
                     print(f"  [Paragraph] Queued study destination institutions for paragraph {idx}.")
+
+    # 25. Dynamic conclusions (postgrad)
+    for idx, para in enumerate(doc.paragraphs):
+        text = para.text.strip()
+
+        if not is_pg:
+            break
+
+        # Conclusion: demographic profile
+        if (
+            "hombres jóvenes, solteros" in text.lower()
+            or "perfil demográfico de la cohorte" in text.lower()
+        ):
+            dom_gen = "hombres" if data["demographics"]["hombre_pct"] >= data["demographics"]["mujer_pct"] else "mujeres"
+            dom_pct = max(data["demographics"]["hombre_pct"], data["demographics"]["mujer_pct"]) * 100
+            soltero_pct = data["demographics"]["soltero_pct"] * 100
+            edad_pct = (data["demographics"]["edad_26_30_pct"] + data["demographics"]["edad_31_35_pct"]) * 100
+            new_text = (
+                f"El perfil demográfico de la cohorte 2025 está compuesto mayoritariamente por {dom_gen} ({dom_pct:.2f}%), "
+                f"en su mayoría solteros ({soltero_pct:.2f}%), de entre 26 y 35 años ({edad_pct:.2f}%), lo que es indicativo "
+                f"de un capital de vida disponible para la consolidación profesional."
+            )
+            para.text = new_text
+            print(f"  [Paragraph] Updated demographic profile conclusion paragraph {idx}.")
+
+        # Conclusion: high training interest for doctorado
+        elif (
+            "alto interés por la formación continua" in text.lower()
+            or ("doctorado" in text.lower() and "inglés" in text.lower())
+        ):
+            doc_pct = data["training_needs"]["capacitacion_doctorado_pct"] * 100
+            si_pct = data["training_needs"]["interes_si_pct"] * 100
+            new_text = (
+                f"Existe un alto interés por la formación continua: el {si_pct:.2f}% de los {graduado_term} expresa interés "
+                f"en actualizarse profesionalmente, destacando una preferencia marcada por programas de Doctorado ({doc_pct:.2f}%)."
+            )
+            para.text = new_text
+            print(f"  [Paragraph] Updated training interest conclusion paragraph {idx}.")
+
+        # Conclusion: public sector dependency
+        elif "dependencia marcada del sector público" in text.lower() or "absorc" in text.lower():
+            pub_pct = data["employment"]["empleo_publico_pct"] * 100
+            priv_pct = data["employment"]["empleo_privado_pct"] * 100
+            new_text = (
+                f"Existe una dependencia marcada del sector público para la absorción de los {graduado_term} ({pub_pct:.2f}%), "
+                f"seguido del sector privado ({priv_pct:.2f}%), lo que sugiere la necesidad de diversificar las estrategias de inserción laboral."
+            )
+            para.text = new_text
+            print(f"  [Paragraph] Updated public sector dependency conclusion paragraph {idx}.")
+
+        # 26. Dynamic recommendations (postgrad)
+        # Recommendation: entrepreneurship integration
+        elif "revisión curricular" in text.lower() and "emprendimiento" in text.lower():
+            emp_pct = data["employment"]["empleo_emprendedor_pct"] * 100
+            new_text = (
+                f"Revisión Curricular: Integrar transversalmente el eje de emprendimiento y gestión empresarial en el programa, "
+                f"dado que apenas el {emp_pct:.2f}% de la cohorte opera bajo modalidades de autoempleo formal."
+            )
+            para.text = new_text
+            print(f"  [Paragraph] Updated entrepreneurship curricular recommendation paragraph {idx}.")
+
+        # Recommendation: language program
+        elif "gestión de idiomas" in text.lower() or "inglés técnico" in text.lower():
+            new_text = (
+                f"Gestión de Idiomas: Crear un programa de inglés técnico intensivo obligatorio o preferencial para {graduado_term} "
+                f"de posgrado, en respuesta a la demanda de actualización identificada en los datos."
+            )
+            para.text = new_text
+            print(f"  [Paragraph] Updated language recommendation paragraph {idx}.")
+
+        # Recommendation: bolsa de empleo
+        elif "fortalecimiento institucional" in text.lower() and "bolsa de empleo" in text.lower():
+            b_si_pct = data.get("insercion", {}).get("bolsa_si_pct", 0.0) * 100
+            b_no_pct = data.get("insercion", {}).get("bolsa_no_pct", 0.0) * 100
+            new_text = (
+                f"Fortalecimiento Institucional: Optimizar la Bolsa de Empleo de la UNL mediante convenios con empleadores del sector. "
+                f"Actualmente solo el {b_si_pct:.2f}% de los {graduado_term} la considera efectiva, frente al {b_no_pct:.2f}% que reporta baja utilidad."
+            )
+            para.text = new_text
+            print(f"  [Paragraph] Updated bolsa de empleo recommendation paragraph {idx}.")
 
     # Execute dynamic bullet insertions in reverse order to keep indices valid
     for idx, items_list, intro in sorted(insertions, key=lambda x: x[0], reverse=True):
