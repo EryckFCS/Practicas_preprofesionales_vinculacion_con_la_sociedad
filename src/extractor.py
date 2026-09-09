@@ -54,29 +54,38 @@ def extract_metadata(report_id, parquet_dir):
             dem_muestra = safe_int(dem_val)
 
     ind_poblacion = 0
-    if os.path.exists(ind_file):
-        df_ind = pd.read_parquet(ind_file)
-        for idx, row in df_ind.iterrows():
-            v1 = str(row.get('variables_encuesta_a_graduados', '')).strip().lower()
-            if "total" in v1:
-                # Check potential columns containing the population value
-                for col in ['unnamed_2', 'resultados', 'n_de_graduados']:
-                    if col in df_ind.columns:
-                        val = safe_int(row.get(col, 0))
-                        if val > 0:
-                            ind_poblacion = val
-                            break
-                if ind_poblacion > 0:
+    try:
+        import openpyxl
+        from src.config import RESULTADOS_DIR
+        excel_name = CAREER_FILES[report_id]["excel"]
+        excel_path = os.path.join(RESULTADOS_DIR, excel_name)
+        if not os.path.exists(excel_path):
+            logger.warning("Report %s: Excel path does not exist: %s", report_id, excel_path)
+        else:
+            wb = openpyxl.load_workbook(excel_path, data_only=True)
+            ind_sheet_name = None
+            for name in wb.sheetnames:
+                if "indicador" in name.lower():
+                    ind_sheet_name = name
                     break
+            if ind_sheet_name:
+                sheet = wb[ind_sheet_name]
+                b4_val = sheet.cell(row=4, column=2).value
+                c4_val = sheet.cell(row=4, column=3).value
+                if b4_val and "total" in str(b4_val).lower():
+                    ind_poblacion = safe_int(c4_val)
+                    logger.info("Report %s: Extracted exact population from Excel indicators: %s", report_id, ind_poblacion)
+    except Exception as e:
+        logger.warning("Report %s: Failed to extract population directly from Excel: %s", report_id, e)
 
     # Apply policy: demografico.parquet is the single truth for final report sample size
     if dem_muestra > 0:
         muestra = dem_muestra
-        if ind_poblacion > 0 and not is_postgraduate(report_id):
+        if ind_poblacion > 0:
             poblacion = ind_poblacion
         else:
             poblacion = dem_muestra
-        if ind_poblacion > 0 and not is_postgraduate(report_id) and ind_poblacion != dem_muestra:
+        if ind_poblacion > 0 and ind_poblacion != dem_muestra:
             logger.info(
                 "Report %s: demografico.muestra=%s differs from indicadores.poblacion=%s",
                 report_id,

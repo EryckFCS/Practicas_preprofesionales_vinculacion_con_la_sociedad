@@ -1,0 +1,13 @@
+report_id,carrera,graduados_muestra,empleadores_muestra,placeholders_detectados,tablas_en_cero,estado_final,observaciones
+35,REPRODUCCION ANIMAL,14,0,0,1,OK,All-zero tables (Table 7)
+36,SANIDAD ANIMAL,15,5,0,0,OK,Ninguno (Totalmente limpio)
+37,MEDICINA VETERINARIA,14,6,0,0,OK,Ninguno (Totalmente limpio)
+38,PRODUCCION ANIMAL,20,0,0,1,OK,All-zero tables (Table 7)
+39,PEDAG. INGLES COMO LE,20,0,0,1,OK,All-zero tables (Table 8)
+40,EDUCACION ESPECIAL,25,6,0,0,OK,Ninguno (Totalmente limpio)
+41,EDUCACION BASICA,11,0,0,1,OK,All-zero tables (Table 8)
+42,EDUCACION INICIAL,10,9,0,0,OK,Ninguno (Totalmente limpio)
+43,ENSEÑANZA LL,20,8,0,0,OK,Ninguno (Totalmente limpio)
+44,DOC INVES EN ES,31,2,0,0,OK,Ninguno (Totalmente limpio)
+45,GESTION EDUCATIVA,18,1,0,0,OK,Ninguno (Totalmente limpio)
+46,EDUCAC DOC SUP,53,2,0,0,OK,Ninguno (Totalmente limpio)
